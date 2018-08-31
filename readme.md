@@ -11,11 +11,10 @@ Example:
 ```
 ./newQtApp test com.example.test
 ```
-or
+or run the graphical user interface by using this command:
 ```
 ./newQtApp gui
 ```
-to run the graphical user interface.
 it require python2.7 and pyQt4 (if you run gui).
 ```
 sudo apt-get install python-qt4
