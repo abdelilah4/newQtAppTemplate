@@ -2,7 +2,7 @@
 ### newQtApp ###
 
 ## Description: ##
-newQtApp is a script that create an new app including some libs like AdMob and ShareLib witch you can open with Qt Creator.
+newQtApp is a script that create an new app including some libs like AdMob and ShareLib which you can open with Qt Creator.
 ## How to use: ##
 ```
 ./newQtApp AppName AppId
