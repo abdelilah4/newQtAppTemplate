@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Home.qml</file>
+        <file>About.qml</file>
+        <file>images/logo.svg</file>
+        <file>images/menu.svg</file>
+        <file>images/menu1.svg</file>
+        <file>images/left-arrow.svg</file>
+        <file>images/share.svg</file>
+        <file>images/copy.svg</file>
+        <file>images/search.svg</file>
+        <file>images/close.svg</file>
+        <file>images/folder.svg</file>
+	<file>images/background.jpg</file>
+        <file>DrawerContent.qml</file>
+        <file>Datastorge.js</file>
+        <file>FooterBar.qml</file>
+    </qresource>
+</RCC>
