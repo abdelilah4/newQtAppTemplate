@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file '/home/abdelilah/Desktop/newQtapp/untitled.ui'
-#
 # Created by: PyQt4 UI code generator 4.11.4
-#
-# WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+try:
+    from PyQt4 import QtCore, QtGui
+except Exception as e:
+    print (str(e))
+
 from sys import *
 import os, shutil, time
 
@@ -16,7 +15,8 @@ yellow = "\033[1;33;40m"
 blue   = "\033[1;34;40m"
 white  = "\033[0;103;40m"
 usage  = yellow+"[i]"+white+" usage:\n    *   newQtApp.py appname appid\n        for example:\n            newQtApp.py appname1 com.example.appname1\n    *   newQtApp.py gui\n        to run the Graphical User Interface."
-source = "/home/abdelilah/pyProjects/newQtApp/newQtAppSrc"
+source = "./newQtAppSrc"
+
 def replaceInFile(path, src, dest):
     f = open(path, "r")
     text = f.read()
@@ -102,6 +102,7 @@ class Ui_MainWindow(object):
             self.plainTextEdit.appendHtml("<font color='red'>[e]</font> App name or app id is empty.")
         else:
             try:
+                #you may change os.getenv("HOME")+"/QtProjects/" with your working directory
                 location = os.getenv("HOME")+"/QtProjects/"+argv1
                 if os.path.exists(location):
                     print (red+"[e]"+white+" "+argv1+" already exits.")
@@ -171,6 +172,7 @@ if __name__ == "__main__":
             exit(3)
     #step 1: copying template files.
     try:
+        #you may change os.getenv("HOME")+"/QtProjects/" with your working directory
         location = os.getenv("HOME")+"/QtProjects/"+argv[1]
         if os.path.exists(location):
             print (red+"[e]"+white+" ["+argv[1]+"] already exits.")
