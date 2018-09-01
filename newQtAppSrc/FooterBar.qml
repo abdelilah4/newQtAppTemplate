@@ -25,7 +25,7 @@ ToolBar{
                 id: banner
                 Component.onCompleted: {
                     banner.unitId = "ca-app-pub-3940256099942544/6300978111"
-                    // "ca-app-pub-3940256099942544/6300978111" <- Test Ad || real one -> "ca-app-pub-5162877303457262/9556206226"
+                    // "ca-app-pub-3940256099942544/6300978111" <- Test Ad
                     banner.size = AdMobBanner.Banner
                     banner.visible = true
                     banner.x = (window.width - banner.width) / 2

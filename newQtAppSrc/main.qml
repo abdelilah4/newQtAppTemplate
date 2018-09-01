@@ -176,7 +176,7 @@ ApplicationWindow {
 
             onClosed: {
                 intertitial.unitId = "ca-app-pub-3940256099942544/1033173712"
-                //"ca-app-pub-3940256099942544/1033173712" <- Test Ad || real one -> "ca-app-pub-5162877303457262/5584692692"
+                //"ca-app-pub-3940256099942544/1033173712" <- Test Ad
             }
 
             onLoaded: {
