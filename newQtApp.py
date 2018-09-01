@@ -197,4 +197,4 @@ if __name__ == "__main__":
         print ("    app version  : "+argv[2])
         print ("    app location : "+location)
     except Exception as e:
-            print (red+"[e]"+white+e)
+            print (red+"[e]"+white+str(e))
