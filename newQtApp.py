@@ -134,7 +134,7 @@ class Ui_MainWindow(object):
                 self.plainTextEdit.appendHtml("\n<font color='red'>[e]</font> "+str(e)+".")
     
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "newQtApp", None))
         self.label.setText(_translate("MainWindow", "App name:", None))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "example", None))
         self.label_2.setText(_translate("MainWindow", "App id      :", None))
