@@ -69,9 +69,9 @@ function storeVariable(variable,value){
 }
 function getVariable(variable){
     var records = getRecords("Settings");
-    var result = "qrc:/images/background.jpg";
+    var result = variable === "visit" ? 1 : variable === "isItRated" ? false : "qrc:/images/background.jpg";
     for (var i =records.length-1;i>-1;i--){
-        if(records[i].variable == variable){
+        if(records[i].variable === variable){
             result = records[i].content;
             break;
         }

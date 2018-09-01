@@ -121,6 +121,7 @@ class Ui_MainWindow(object):
                     replaceInFile(location+"/main.qml","%%AppName%%",argv1)
                     replaceInFile(location+"/platform/android/AndroidManifest.xml","%%AppName%%",argv1)
                     replaceInFile(location+"/platform/android/AndroidManifest.xml","%%AppId%%",argv2)
+                    replaceInFile(location+"/RateForm.qml","%%AppId%%",argv[2])
                     self.plainTextEdit.appendHtml("<font color='green'>[done]</font>")
                     print (green+"[done]")
                     #step 3: show the app info.
@@ -185,8 +186,10 @@ if __name__ == "__main__":
         os.rename(location+"/newQtAppSrc.pro",location+"/"+argv[1]+".pro")
         replaceInFile(location+"/About.qml","%%AppName%%",argv[1])
         replaceInFile(location+"/main.qml","%%AppName%%",argv[1])
+	replaceInFile(location+"/main.qml","%%package_name%%",argv[1])
         replaceInFile(location+"/platform/android/AndroidManifest.xml","%%AppName%%",argv[1])
         replaceInFile(location+"/platform/android/AndroidManifest.xml","%%AppId%%",argv[2])
+        replaceInFile(location+"/RateForm.qml","%%AppId%%",argv[2])
         print (green+"[done]")
         #step 3: show the app info.
         print (yellow+"[i]"+white+" ["+argv[1]+"] created "+green+"succefully"+white+".")

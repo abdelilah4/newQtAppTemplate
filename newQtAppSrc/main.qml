@@ -11,31 +11,54 @@ ApplicationWindow {
     property string mainbackgroundimg;
     property string maincolor;
     property int nClick: 0
+    property int visit;
+    property bool isItRated;
 
     onMainbackgroundimgChanged:{
         Db.storeVariable("mainbackgroundimg",mainbackgroundimg)
     }
     onMaincolorChanged: Db.storeVariable("maincolor",maincolor)
-
-    function setMainBgImg(x){
+    function checkRate()
+    {
+        if (isItRated == false)
+            if (visit % 5 == 0)
+            {
+                rateForm.visible = true;
+            }
+    }
+    function setMainBgImg(x)
+    {
         mainbackgroundimg = x;
     }
-    function nClickchanged() {
-        if(nClick==5){
-            if(intertitial.isLoaded){
+    function nClickchanged()
+    {
+        if(nClick==5)
+        {
+            if(intertitial.isLoaded)
+            {
                 intertitial.visible = true;
             }
             nClick = 0;
-        }else{
+        }
+        else
+        {
             nClick =nClick + 1;
         }
     }
-    function retour(){
+    function retour()
+    {
         nClickchanged();
         if (stackView.depth > 1)
             stackView.pop()
         else
             drawer.open()
+    }
+    RateForm
+    {
+        id: rateForm
+        anchors.fill: parent
+        z:2
+        visible: false
     }
     Shortcut {
               sequences: ["Esc", "Back"]
@@ -171,5 +194,10 @@ ApplicationWindow {
         Db.init();
         mainbackgroundimg= Db.getVariable("mainbackgroundimg");
         maincolor = Db.getVariable("maincolor");
+        visit = Db.getVariable("visit");
+        isItRated = Db.getVariable("isItRated");
+        checkRate();
+        visit += 1;
+        Db.storeVariable("visit", visit);
     }
 }

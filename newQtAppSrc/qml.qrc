@@ -13,9 +13,11 @@
         <file>images/search.svg</file>
         <file>images/close.svg</file>
         <file>images/folder.svg</file>
-	<file>images/background.jpg</file>
+        <file>images/background.jpg</file>
+	<file>images/rating.svg</file>
         <file>DrawerContent.qml</file>
         <file>Datastorge.js</file>
         <file>FooterBar.qml</file>
+        <file>RateForm.qml</file>
     </qresource>
 </RCC>
